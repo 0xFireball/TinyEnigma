@@ -114,13 +114,19 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="browseBtnClick:" target="XfG-lQ-9wD" id="6Od-Sp-NGs"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lef-iO-vpO">
-                                <rect key="frame" x="343" y="2" width="82" height="32"/>
+                                <rect key="frame" x="345" y="2" width="82" height="32"/>
                                 <buttonCell key="cell" type="push" title="Decrypt" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9Wu-X5-zdE">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="btnDecryptClicked:" target="XfG-lQ-9wD" id="kXT-lS-g6E"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pOh-hF-pqF">
                                 <rect key="frame" x="267" y="2" width="82" height="32"/>
@@ -128,6 +134,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="btnEncryptClicked:" target="XfG-lQ-9wD" id="pQ6-uH-LnI"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X7O-Bb-seS">
                                 <rect key="frame" x="8" y="9" width="259" height="17"/>
@@ -145,8 +154,18 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IiP-0W-EOJ">
+                                <rect key="frame" x="349" y="83" width="62" height="18"/>
+                                <buttonCell key="cell" type="check" title="Show" bezelStyle="regularSquare" imagePosition="left" inset="2" id="DJy-ld-0sQ">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="showPassphraseChkChanged:" target="XfG-lQ-9wD" id="VJp-6S-rj3"/>
+                                </connections>
+                            </button>
                             <secureTextField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fbo-0G-rru">
-                                <rect key="frame" x="20" y="81" width="323" height="22"/>
+                                <rect key="frame" x="20" y="82" width="323" height="22"/>
                                 <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="ZmV-lW-b6N">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -155,16 +174,16 @@
                                         <string>NSAllRomanInputSourcesLocaleIdentifier</string>
                                     </allowedInputSourceLocales>
                                 </secureTextFieldCell>
+                                <connections>
+                                    <action selector="tbPassphraseChanged:" target="XfG-lQ-9wD" id="nG7-Gz-qhh"/>
+                                </connections>
                             </secureTextField>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IiP-0W-EOJ">
-                                <rect key="frame" x="349" y="83" width="62" height="18"/>
-                                <buttonCell key="cell" type="check" title="Show" bezelStyle="regularSquare" imagePosition="left" inset="2" id="DJy-ld-0sQ">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="statusTxt" destination="X7O-Bb-seS" id="Yvc-LT-7Ln"/>
+                        <outlet property="tbPassphrase" destination="fbo-0G-rru" id="Cch-gy-iiz"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

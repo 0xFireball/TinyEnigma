@@ -20,6 +20,12 @@ namespace TinyEnigma.XMac
 
 		}
 
+		partial void browseBtnClick (NSObject sender)
+		{
+			//Select input File
+
+		}
+
 		public override NSObject RepresentedObject {
 			get {
 				return base.RepresentedObject;
