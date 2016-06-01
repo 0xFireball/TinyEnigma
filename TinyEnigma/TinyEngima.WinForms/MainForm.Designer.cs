@@ -15,6 +15,8 @@ namespace TinyEngima.WinForms
 		private System.Windows.Forms.Button button3;
 		private System.Windows.Forms.TextBox tbPassphrase;
 		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.CheckBox checkBox1;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -45,6 +47,8 @@ namespace TinyEngima.WinForms
 			this.button3 = new System.Windows.Forms.Button();
 			this.tbPassphrase = new System.Windows.Forms.TextBox();
 			this.label3 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
+			this.checkBox1 = new System.Windows.Forms.CheckBox();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -101,6 +105,7 @@ namespace TinyEngima.WinForms
 			// 
 			this.tbPassphrase.Location = new System.Drawing.Point(49, 207);
 			this.tbPassphrase.Name = "tbPassphrase";
+			this.tbPassphrase.PasswordChar = '*';
 			this.tbPassphrase.Size = new System.Drawing.Size(261, 25);
 			this.tbPassphrase.TabIndex = 5;
 			this.tbPassphrase.TextChanged += new System.EventHandler(this.TbPassphraseTextChanged);
@@ -114,11 +119,32 @@ namespace TinyEngima.WinForms
 			this.label3.TabIndex = 6;
 			this.label3.Text = "Passphrase";
 			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Location = new System.Drawing.Point(12, 253);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(46, 19);
+			this.label4.TabIndex = 7;
+			this.label4.Text = "Ready";
+			// 
+			// checkBox1
+			// 
+			this.checkBox1.Location = new System.Drawing.Point(317, 207);
+			this.checkBox1.Name = "checkBox1";
+			this.checkBox1.Size = new System.Drawing.Size(74, 24);
+			this.checkBox1.TabIndex = 8;
+			this.checkBox1.Text = "Show";
+			this.checkBox1.UseVisualStyleBackColor = true;
+			this.checkBox1.CheckedChanged += new System.EventHandler(this.CheckBox1CheckedChanged);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(403, 281);
+			this.Controls.Add(this.checkBox1);
+			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.tbPassphrase);
 			this.Controls.Add(this.button3);

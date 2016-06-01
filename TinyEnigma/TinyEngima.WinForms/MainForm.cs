@@ -46,7 +46,10 @@ namespace TinyEngima.WinForms
 				MessageBox.Show("Please select all inputs and/or enter a passphrase.");
 				return;
 			}
+			label4.Text = "Encrypting...";
 			await Task.Run(()=>TinyEngimaCommon.RunCryptoOnFile(inputFilename, outputFile, passphrase, true));
+			label4.Text = "Completed.";
+			MessageBox.Show("The operation completed successfully.");
 		}
 		async void Button3Click(object sender, EventArgs e)
 		{
@@ -57,11 +60,25 @@ namespace TinyEngima.WinForms
 				MessageBox.Show("Please select all inputs and/or enter a passphrase.");
 				return;
 			}
+			label4.Text = "Decrypting...";
 			await Task.Run(()=>TinyEngimaCommon.RunCryptoOnFile(inputFilename, outputFile, passphrase, false));
+			label4.Text = "Completed.";
+			MessageBox.Show("The operation completed successfully.");
 		}
 		void TbPassphraseTextChanged(object sender, EventArgs e)
 		{
 			passphrase = tbPassphrase.Text;
+		}
+		void CheckBox1CheckedChanged(object sender, EventArgs e)
+		{
+			if (checkBox1.Checked)
+			{
+				tbPassphrase.PasswordChar = (char)0;
+			}
+			else
+			{
+				tbPassphrase.PasswordChar = '*';
+			}
 		}
 	}
 }
