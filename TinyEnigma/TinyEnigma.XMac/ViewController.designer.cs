@@ -35,14 +35,14 @@ namespace TinyEnigma.XMac
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (tbPassphrase != null) {
-				tbPassphrase.Dispose ();
-				tbPassphrase = null;
-			}
-
 			if (statusTxt != null) {
 				statusTxt.Dispose ();
 				statusTxt = null;
+			}
+
+			if (tbPassphrase != null) {
+				tbPassphrase.Dispose ();
+				tbPassphrase = null;
 			}
 		}
 	}

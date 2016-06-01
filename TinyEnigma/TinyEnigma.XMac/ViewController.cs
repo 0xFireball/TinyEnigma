@@ -7,6 +7,8 @@ namespace TinyEnigma.XMac
 {
 	public partial class ViewController : NSViewController
 	{
+        string inputFile;
+
 		public ViewController (IntPtr handle) : base (handle)
 		{
 		}
@@ -22,8 +24,8 @@ namespace TinyEnigma.XMac
 
 		partial void browseBtnClick (NSObject sender)
 		{
-			//Select input File
-
+            //Select input File
+            inputFile = FileBrowserUtil.BrowseForOpenFile(null, "Select an Input File");
 		}
 
 		public override NSObject RepresentedObject {
