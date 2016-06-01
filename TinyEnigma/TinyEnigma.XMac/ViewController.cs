@@ -16,6 +16,8 @@ namespace TinyEnigma.XMac
 			base.ViewDidLoad ();
 
 			// Do any additional setup after loading the view.
+
+
 		}
 
 		public override NSObject RepresentedObject {
