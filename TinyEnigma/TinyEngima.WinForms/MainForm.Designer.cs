@@ -13,6 +13,8 @@ namespace TinyEngima.WinForms
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Button button3;
+		private System.Windows.Forms.TextBox tbPassphrase;
+		private System.Windows.Forms.Label label3;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -41,6 +43,8 @@ namespace TinyEngima.WinForms
 			this.button1 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
 			this.button3 = new System.Windows.Forms.Button();
+			this.tbPassphrase = new System.Windows.Forms.TextBox();
+			this.label3 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -71,6 +75,7 @@ namespace TinyEngima.WinForms
 			this.button1.TabIndex = 2;
 			this.button1.Text = "Browse";
 			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.Button1Click);
 			// 
 			// button2
 			// 
@@ -80,6 +85,7 @@ namespace TinyEngima.WinForms
 			this.button2.TabIndex = 3;
 			this.button2.Text = "Encrypt";
 			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.Button2Click);
 			// 
 			// button3
 			// 
@@ -89,12 +95,32 @@ namespace TinyEngima.WinForms
 			this.button3.TabIndex = 4;
 			this.button3.Text = "Decrypt";
 			this.button3.UseVisualStyleBackColor = true;
+			this.button3.Click += new System.EventHandler(this.Button3Click);
+			// 
+			// tbPassphrase
+			// 
+			this.tbPassphrase.Location = new System.Drawing.Point(49, 207);
+			this.tbPassphrase.Name = "tbPassphrase";
+			this.tbPassphrase.Size = new System.Drawing.Size(261, 25);
+			this.tbPassphrase.TabIndex = 5;
+			this.tbPassphrase.TextChanged += new System.EventHandler(this.TbPassphraseTextChanged);
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Location = new System.Drawing.Point(49, 185);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(77, 19);
+			this.label3.TabIndex = 6;
+			this.label3.Text = "Passphrase";
 			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(403, 281);
+			this.Controls.Add(this.label3);
+			this.Controls.Add(this.tbPassphrase);
 			this.Controls.Add(this.button3);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.button1);
