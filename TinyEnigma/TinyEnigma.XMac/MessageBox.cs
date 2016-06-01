@@ -8,7 +8,7 @@ namespace TinyEnigma.XMac
         {
             var alert = new NSAlert()
             {
-                AlertStyle = NSAlertStyle.Critical,
+                AlertStyle = NSAlertStyle.Informational,
                 InformativeText = text,
                 MessageText = title,
             };
